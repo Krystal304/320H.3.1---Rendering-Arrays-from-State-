@@ -7,10 +7,16 @@ import './App.css'
 function App() {
   const [learners, setLearners] = useState({ learners: learnerData});
 
+  const appStyle = {
+    backgroundColor: '#f5f5f5',
+    color: 'purple',
+    fontFamily: 'Arial, san-serif'
+  };
+
   return (
     <>
-    <div>
-      <h1>Learners List</h1>
+    <div style={appStyle}>
+      <h1 style={{ color: 'goldenrod'}}>Learners List</h1>
       {learners.learners.map((learner, index) => (
         <Learner key={index} learner={learner} />
       ))}

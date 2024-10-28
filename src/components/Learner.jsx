@@ -6,10 +6,24 @@ import Score from './Score.jsx';
 
 
 const Learner = ({ learner }) => {
+
+  const learnerStyle = {
+    border: '2px solid #264653',
+    borderRadius: '10px',
+    marginBottom: '20px',
+    padding: '15px',
+    backgroundColor: 'tan',
+    color: 'brown',
+  };
+  const bioStyle = {
+    fontStyle: 'italic',
+    color: 'blue',
+
+  }
   return (
-    <div style={{ border: '1px solid #ccc', marginBottom: '10px', padding: '10px'}}>
+    <div style={learnerStyle}>
         <h2>{learner.name}</h2>
-        <p>{learner.bio}</p>
+        <p style={bioStyle}>{learner.bio}</p>
         <div>
           <h3>Scores:</h3>
           {learner.scores.map((score, index) =>
